@@ -1,5 +1,7 @@
 # Moss Stream Chat
 
+English | [中文指南](https://github.com/GitEventhandler/MOSS-stream-chat/blob/master/README_zh.md)
+
 ## About
 
 This project is a [MOSS](https://github.com/OpenLMLab/MOSS) frontend that supports streaming conversations. You may need to use wsl if you run this app on windows (package triton only support linux currently).  
