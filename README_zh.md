@@ -1,33 +1,34 @@
 # Moss Stream Chat
 
-## About
+[English](https://github.com/GitEventhandler/MOSS-stream-chat/blob/master/README.md) | 中文指南
 
-This project is a [MOSS](https://github.com/OpenLMLab/MOSS) frontend that supports streaming conversations. You may need to use wsl if you run this app on windows (package triton only support linux currently).  
+## 关于
+
+本项目是[MOSS](https://github.com/OpenLMLab/MOSS)的一个streamlit前端，支持流式返回对话。如果想在Windows上运行本项目，可能需要使用wsl（目前triton包只支持linux）。  
 ![](https://github.com/GitEventhandler/MOSS-stream-chat/blob/master/screenshot/moss_stream_chat.gif)
 
-## Requirements
+## 环境要求
 
-There are no new dependencies required compared to MOSS. You can use MOSS's python environment directly.
+相比MOSS，本项目没有引入其它依赖。因此，如果运行过MOSS，使用它的环境可以直接运行本项目。
 
-### Install conda
+### 安装conda
 
-You can find the installation tutorial on [Anaconda's official website](https://www.anaconda.com/download/). Remember to
-init conda before using it.
+具体安装过程请查阅[Anaconda的官方网站](https://www.anaconda.com/download/)。安装后应先调用conda init。
 
 ```shell
 conda init
 ```
 
-### Create Virtual Environment
+### 创建虚拟环境
 
 ```shell
 conda create --name moss python=3.8
 conda activate moss
 ```
 
-### Install pytorch
+### 安装PyTorch
 
-#### Linux and windows
+#### Linux和windows
 
 ```shell
 # CUDA 11.6
@@ -44,26 +45,26 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 cpuonly -c 
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 -c pytorch
 ```
 
-### Install other python packages
+### 安装其他的Python包
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## Usage
+## 使用方法
 
-First, create fnlp folder, and put your model files under fnlp folder.
+首先创建一个fnlp文件夹，然后将MOSS的模型文件放到fnlp文件夹下。
 ```shell
 mkdir fnlp
 ```
 
-To run with default config.
+直接用默认环境运行，请执行以下命令。
 
 ```shell
 streamlit run web_demo.py
 ```
 
-If you want to pass in arguments, be careful to use command "web_demo.py **--** [params]".
+若想设置参数，请调用"web_demo.py **--** [params]".
 
 ```
 streamlit run web_demo.py -- [-h] [--model_name {fnlp/moss-moon-003-sft,fnlp/moss-moon-003-sft-int8,fnlp/moss-moon-003-sft-int4}] [--ai_name AI_NAME] [--gpu GPU]
